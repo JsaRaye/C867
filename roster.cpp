@@ -151,7 +151,7 @@ int main()
 
 	"A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
 
-	"A5,Jessica,Fleming,jflem28@wgu.edu,32,20,45,29, SOFTWARE"
+	"A5,First,Last,abc123@wgu.edu,22,20,45,29, SOFTWARE"
 	};
 
 	Roster classRoster;
