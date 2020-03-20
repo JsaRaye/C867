@@ -10,7 +10,7 @@ SoftwareStudent::SoftwareStudent()
 
 }
 
-SoftwareStudent::SoftwareStudent(string sID, string fName, string lName, string eADD, int sAge, int* nDays, Degree degreeProgram)
+SoftwareStudent::SoftwareStudent(string sID, string fName, string lName, string eADD, int sAge, int* numDays, Degree degreeProgram)
 {
 	degreeProgram = degreeProgram;
 }
