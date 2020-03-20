@@ -10,7 +10,7 @@ SecurityStudent::SecurityStudent()
 
 }
 
-SecurityStudent::SecurityStudent(string sID, string fName, string lName, string eADD, int sAge, int* nDays, Degree degreeProgram)
+SecurityStudent::SecurityStudent(string sID, string fName, string lName, string eADD, int sAge, int* numDays, Degree degreeProgram)
 {
 	degreeProgram = degreeProgram;
 }
