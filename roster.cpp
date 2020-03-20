@@ -15,30 +15,27 @@ Roster::Roster()
 
 }
 
-void Roster::add(string sID, string fName, string lName, string eADD, int sAge, int nday0, int nday1, int nday2, Degree degreeProgram)
+void Roster::add(string sID, string fName, string lName, string eADD, int age, int nDays0, int nDays1, int nDays2, Degree degreeProgram)
 {
-	int avgDays[] = {nday0, nday1, nday2};
-	
+	int numDays[3] = {nDays0, nDays1, nDays2};
+
 	for (int i = 0; i < 5; i++) 
 	{
-		if (classRosterArray[i] == nullptr) 
-		{
 			switch (degreeProgram)
 			{
 			case Degree::SECURITY:
-				classRosterArray[i] = new SecurityStudent(sID, fName, lName, eADD, sAge, avgDays, degreeProgram);
+				classRosterArray[i] = new SecurityStudent(sID, fName, lName, eADD, age, numDays, degreeProgram);
 				break;
 			case Degree::NETWORK:
-				classRosterArray[i] = new NetworkStudent(sID, fName, lName, eADD, sAge, avgDays, degreeProgram);
+				classRosterArray[i] = new NetworkStudent(sID, fName, lName, eADD, age, numDays, degreeProgram);
 				break;
 			case Degree::SOFTWARE:
-				classRosterArray[i] = new SecurityStudent(sID, fName, lName, eADD, sAge, avgDays, degreeProgram);
+				classRosterArray[i] = new SecurityStudent(sID, fName, lName, eADD, age, numDays, degreeProgram);
 				break;
 			default:
 				cout << "ERROR: Entered Degree Progam was not found." << endl;
 				break;
 			}
-		}
 	}
 }
 
@@ -47,7 +44,7 @@ void Roster::remove(string studentID)
 	bool sidremoved = false;
 	for (int i = 0; i < 5; i++) 
 	{
-		if (classRosterArray[i] != NULL)
+		if (classRosterArray[i] != nullptr)
 		{
 			if (studentID == classRosterArray[i]->getStudentID()) 
 			{
@@ -66,9 +63,10 @@ void Roster::printAll()
 {
 	cout << "Student Roster: " << endl << endl;
 	for (int i = 0; i < 5; i++) 
-	{
-		(*classRosterArray[i]).print();
+	{	
+		(*classRosterArray[i]).print();	
 	}
+
 	cout << endl;
 }
 
@@ -136,7 +134,7 @@ Roster::~Roster()
 int main() 
 {
 	cout << "\tC867 - Scripting and Programming - Applications" << endl;
-	cout << "\t\tTASK 1: CLASS ROSTER" << endl;
+	cout << "\t\tLanguage: C++" << endl;
 	cout << "\t\t  Jessica Fleming" << endl;
 	cout << "\t\t  ID#: 000616694" << endl << endl;
 
@@ -151,7 +149,7 @@ int main()
 
 	"A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
 
-	"A5,First,Last,abc123@wgu.edu,22,20,45,29, SOFTWARE"
+	"A5,Jessica,Fleming,jflem28@wgu.edu,32,20,45,29, SOFTWARE"
 	};
 
 	Roster classRoster;
@@ -162,7 +160,7 @@ int main()
 	{
 		stringstream ss(studentData[i]);
 
-		vector<string> stdata;
+		vector<string> stdata(9);
 
 		while (ss.good()) {
 			string substr;
