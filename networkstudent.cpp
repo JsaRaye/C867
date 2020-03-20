@@ -10,7 +10,7 @@ NetworkStudent::NetworkStudent()
 
 }
 
-NetworkStudent::NetworkStudent(string sID, string fName, string lName, string eADD, int sAge, int* nDays, Degree degreeProgram)
+NetworkStudent::NetworkStudent(string sID, string fName, string lName, string eADD, int sAge, int* numDays, Degree degreeProgram)
 {
 	degreeProgram = degreeProgram;
 }
