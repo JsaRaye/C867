@@ -6,19 +6,26 @@ using namespace std;
 
 Student::Student()
 {
-	
+	studentID = " ";
+	firstName = " ";
+	lastName = " ";
+	emailADD = " ";
+	age = 0;
+	numDays[0] = 0;
+	numDays[1] = 0;
+	numDays[2] = 0;
 }
 
-Student::Student(string sID, string fName, string lName, string eADD, int sAge, int* nDays)
+Student::Student(string sID, string fName, string lName, string eADD, int age, int* numDays)
 {
 	studentID = sID;
 	firstName = fName;
 	lastName = lName;
 	emailADD = eADD;
-	age = sAge;
-	numDays[0] = nDays[0];
-	numDays[1] = nDays[1];
-	numDays[2] = nDays[2];
+	age = age;
+	numDays[0] = numDays[0];
+	numDays[1] = numDays[1];
+	numDays[2] = numDays[2];
 }
 
 void Student::setStudentID(string sID)
@@ -41,16 +48,16 @@ void Student::setEmailADD(string eADD)
 	emailADD = eADD;
 }
 
-void Student::setAge(int sAge)
+void Student::setAge(int age)
 {
-	age = sAge;
+	this->age = age;
 }
 
-void Student::setNumDays(int nday0, int nday1, int nday2)
+void Student::setNumDays(int nDays0, int nDays1, int nDays2)
 {
-	numDays[0] = nday0;
-	numDays[1] = nday1;
-	numDays[2] = nday2;
+	numDays[0] = nDays0;
+	numDays[1] = nDays1;
+	numDays[2] = nDays2;
 }
 
 void Student::setDegreeProgram(string degreeProgram)
