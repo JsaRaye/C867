@@ -8,12 +8,12 @@ using namespace std;
 class Roster 
 {
 private:
-	Student *classRosterArray[5];
+	Student* classRosterArray[5];
 
 public:
 	Roster();
 
-	void add(string studentID, string firstName, string lastName, string emailADD, int age, int nday0, int nday1, int nday2, Degree degreeProgram);
+	void add(string studentID, string firstName, string lastName, string emailADD, int age, int nDays0, int nDays1, int nDays2, Degree degreeProgram);
 
 	void remove(string studentID);
 
@@ -30,4 +30,3 @@ public:
 	~Roster();
 
 };
-
