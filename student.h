@@ -9,14 +9,14 @@ class Student
 public:
 	
 	Student();
-	Student(string sID, string fName, string lName, string eADD, int sAge, int* nDays);
+	Student(string sID, string fName, string lName, string eADD, int age, int* numDays);
 
 	void setStudentID(string studentID);
 	void setFirstName(string firstName);
 	void setLastName(string lastName);
 	void setEmailADD(string emailADD);
 	void setAge(int age);
-	void setNumDays(int nday0, int nday1, int nday2);
+	void setNumDays(int nDays0, int nDays1, int nDays2);
 	void setDegreeProgram(string degreeProgram);
 
 	string getStudentID();
