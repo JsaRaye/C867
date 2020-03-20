@@ -9,7 +9,7 @@ class SecurityStudent : public Student
 public:
 	SecurityStudent();
 
-	SecurityStudent(string sID, string fName, string lName, string eADD, int sAge, int* nDays, Degree degreeProgram);
+	SecurityStudent(string sID, string fName, string lName, string eADD, int sAge, int* numDays, Degree degreeProgram);
 
 	Degree getDegreeProgram() override;
 
