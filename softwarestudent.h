@@ -9,7 +9,7 @@ class SoftwareStudent : public Student
 public:
 	SoftwareStudent();
 
-	SoftwareStudent(string sID, string fName, string lName, string eADD, int sAge, int* nDays, Degree degreeProgram);
+	SoftwareStudent(string sID, string fName, string lName, string eADD, int sAge, int* numDays, Degree degreeProgram);
 
 	Degree getDegreeProgram() override;
 
