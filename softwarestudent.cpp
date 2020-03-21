@@ -1,6 +1,4 @@
-#include "student.h"
 #include "softwarestudent.h"
-#include "degree.h"
 #include <iostream>
 using namespace std;
 
@@ -10,14 +8,14 @@ SoftwareStudent::SoftwareStudent()
 
 }
 
-SoftwareStudent::SoftwareStudent(string sID, string fName, string lName, string eADD, int sAge, int* numDays, Degree degreeProgram)
+SoftwareStudent::SoftwareStudent(string sID, string fName, string lName, string eADD, int age, int* numDays, Degree degreeProgram)
 {
-	degreeProgram = degreeProgram;
+	this->degreeProgram = degreeProgram;
 }
 
 Degree SoftwareStudent::getDegreeProgram()
 {
-	return degreeProgram;
+	return degreeProgram; //Degree::SOFTWARE??
 }
 
 void SoftwareStudent::print()
