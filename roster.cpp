@@ -133,7 +133,7 @@ int main()
 {
 	cout << "\tC867 - Scripting and Programming - Applications" << endl;
 	cout << "\t\tLanguage: C++" << endl;
-	cout << "\t\tJessica Fleming" << endl;
+	cout << "\t\tJ F" << endl;
 	cout << "\t\tID#: 000616694" << endl << endl;
 
 	const string studentData[] =
@@ -146,7 +146,7 @@ int main()
 
 	"A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
 
-	"A5,Jessica,Fleming,jflem28@wgu.edu,32,20,45,29, SOFTWARE"
+	"A5,first,last,email,32,20,45,29, SOFTWARE"
 	};
 
 	Roster classRoster;
