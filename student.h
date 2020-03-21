@@ -1,6 +1,5 @@
 #pragma once
 #include "degree.h"
-#include <iostream>
 #include <string>
 using namespace std;
 
@@ -24,12 +23,11 @@ public:
 	string getLastName();
 	string getEmailADD();
 	int    getAge();
-	int   *getNumDays();
+	int*   getNumDays();
 	
 
-	virtual void print();
-
-	virtual Degree getDegreeProgram();
+	virtual void print() = 0;
+	virtual Degree getDegreeProgram() = 0;
 
 	~Student();
 
@@ -40,5 +38,4 @@ private:
 	string emailADD;
 	int    age;
 	int    numDays[3];
-
 };
