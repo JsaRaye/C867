@@ -13,5 +13,5 @@ public:
 	void print() override;
 
 private:
-	Degree degreeProgram; //Degree::SECURITY
+	Degree degreeProgram; //Degree::SECURITY??
 };
