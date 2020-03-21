@@ -6,14 +6,6 @@ using namespace std;
 
 Student::Student()
 {
-	studentID = " ";
-	firstName = " ";
-	lastName = " ";
-	emailADD = " ";
-	age = 0;
-	numDays[0] = 0;
-	numDays[1] = 0;
-	numDays[2] = 0;
 }
 
 Student::Student(string sID, string fName, string lName, string eADD, int age, int* numDays)
@@ -22,10 +14,10 @@ Student::Student(string sID, string fName, string lName, string eADD, int age, i
 	firstName = fName;
 	lastName = lName;
 	emailADD = eADD;
-	age = age;
-	numDays[0] = numDays[0];
-	numDays[1] = numDays[1];
-	numDays[2] = numDays[2];
+	this->age = age;
+	this->numDays[0] = numDays[0];
+	this->numDays[1] = numDays[1];
+	this->numDays[2] = numDays[2];
 }
 
 void Student::setStudentID(string sID)
@@ -55,16 +47,15 @@ void Student::setAge(int age)
 
 void Student::setNumDays(int nDays0, int nDays1, int nDays2)
 {
-	numDays[0] = nDays0;
-	numDays[1] = nDays1;
-	numDays[2] = nDays2;
+	Student::numDays[0] = nDays0;
+	Student::numDays[1] = nDays1;
+	Student::numDays[2] = nDays2;
 }
 
 void Student::setDegreeProgram(string degreeProgram)
 {
 	degreeProgram = degreeProgram;
 }
-
 
 string Student::getStudentID()
 {
@@ -91,21 +82,15 @@ int Student::getAge()
 	return age;
 }
 
-int *Student::getNumDays()
+int* Student::getNumDays()
 {
 	return numDays;
 }
 
-
 Degree Student::getDegreeProgram()
 {
-	return Degree::SOFTWARE;
+	return Degree::SOFTWARE; // return degreeProgram *degreeProgram undefined*
 }
-
-void Student::print()
-{
-}
-
 
 Student::~Student()
 {
