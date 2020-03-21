@@ -1,17 +1,17 @@
 #pragma once
 #include "degree.h"
 #include "student.h"
-#include <iostream>
-#include <string>
-using namespace std;
 
 class Roster 
 {
 private:
-	Student* classRosterArray[5];
+	Student *classRosterArray[5];
+
 
 public:
 	Roster();
+
+	virtual ~Roster();
 
 	void add(string studentID, string firstName, string lastName, string emailADD, int age, int nDays0, int nDays1, int nDays2, Degree degreeProgram);
 
@@ -26,7 +26,4 @@ public:
 	void printByDegreeProgram(string degreeProgram);
 
 	int  index = 0;
-
-	~Roster();
-
 };
