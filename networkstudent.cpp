@@ -15,7 +15,7 @@ NetworkStudent::NetworkStudent(string sID, string fName, string lName, string eA
 
 Degree NetworkStudent::getDegreeProgram()
 {
-	return degreeProgram;
+	return degreeProgram; //Degree::NETWORK??
 }
 
 void NetworkStudent::print()
